@@ -1,0 +1,104 @@
+#banner {
+    margin-top: 5px;
+}
+
+.embla {
+    max-width: 940px;
+    overflow: hidden;
+    position: relative;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.embla__slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.embla__dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    top: -10px;
+}
+
+.dot {
+    width: 30px;
+    height: 3px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.is-selected {
+    background-color: var(--light-primary-color);
+}
+
+.embla__slide {
+    cursor: pointer;
+}
+
+.embla__prev,
+.embla__next {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.embla__prev { 
+    left: 10px; 
+    transform: translate(-30px, -50%);
+}
+
+.embla__next { 
+    right: 10px; 
+    transform: translate(30px, -50%);
+}
+
+.embla__prev i,
+.embla__next i {
+    font-size: 1.5rem;
+    color: var(--light-primary-color);
+    font-weight: 800;
+}
+
+.embla:hover .embla__prev {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -50%);
+}
+
+.embla:hover .embla__next {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -50%);
+}

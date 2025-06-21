@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+:root {
+    /* Color */
+    --white-color: #fff;
+    --black-color: #000;
+    --btn-search-color: #00000085;
+    --hover-box: #cccccc2e;
+    --hover-box-wrapper: rgba(0, 0, 0, 0.6);
+    --close-btn: #f33;
+    --border-authen: rgb(102, 178, 255);
+    --border-color: #ccc;
+    --logo-color: #70c0a0;
+    
+    /* Light Mode */
+    --light-primary-color: #5eead4; /* Màu chính */
+    --light-sub-color: #ccfbf1; /* Màu phụ */
+    --light-primary-bg-color: #f9fafb; /* Nền chính */
+    --light-sub-bg-color: #f3f4f6; /* Nền phụ */
+    --light-text-primary-color: #111827; /* Màu chữ chính */
+    --light-text-sub-color: #6b7280; /* Màu chữ phụ */
+    --light-dark-accent-color: #1e3a3a; /* Màu nhấn tối */
+    --light-text-hover-color: #00000094; /* Text Hover Color */
+    --light-border-color: rgb(154, 219, 179) ; /* Border */ 
+    --light-item-hover-color: #f2f2f2; /* Item Hover */
+    --error-color: #f33a58;
+
+    /* Dark Mode */
+    --dark-primary-color: #2dd4bf;/* Màu chính */
+    --dark-sub-bg-color: #1e293b; /* Màu phụ */
+    --dark-primary-bg-color: #0f172a; /* Nền chính */
+    --dark-sub-color: #99f6e4;
+    --dark-text-primary-color: #ffffff;
+    --dark-text-sub-color: #94a3b8;
+
+    /* Width */
+    --primary-width: 1200px;
+    --search-width: 500px;
+    --tool-width: 45px;
+    
+    /* Height */
+    --navbar-height: 30px;
+    --flag-height: 30px;
+    --search-height: 45px;
+    --tool-height: 45px;
+}
+
+
+html, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary-bg-color);
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+    border: none;
+}
+
+#tht-wrapper, 
+#navtop {
+    max-width: var(--primary-width);
+    margin: 0 auto;
+}
+
+.no-pointer {
+    cursor: default !important;
+    user-select: none;
+}
+
+.no-hover {
+    color: inherit !important;
+    background-color: inherit;
+}
+
+span, img {
+    background-color: transparent;
+}
+
+button, a {
+    cursor: pointer;
+}

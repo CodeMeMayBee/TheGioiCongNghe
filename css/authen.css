@@ -1,0 +1,351 @@
+.modal {
+    position: fixed;
+    display: block;
+    inset: 0;
+    background-color: var(--hover-box-wrapper);
+}
+
+.container__modal {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.content__modal {
+    position: relative;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.content__modal.fade-out {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+@keyframes hideAuthenModal {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+    }
+}
+
+.close__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 4px;
+    transition-duration: 0.2s;
+}
+
+.close__btn > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.close__btn:hover {
+    background-color: var(--close-btn);
+    border-radius: 50%;
+}
+
+.form__authen {
+    display: flex;
+    width: 1200px;
+    height: auto;
+}
+
+.art__authen {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+}
+
+.img__logo {
+    width: 150px;
+    user-select: none;
+}
+
+.img__form {
+    width: 316px;
+    max-width: 100%;
+    margin-top: 30px;
+    user-select: none;
+    background-color: transparent;
+    transition: box-shadow 0.3s ease;
+    will-change: box-shadow;
+}
+
+.authen__form {
+    flex: 1;
+    margin: 20px 10px 0 10px;
+}
+
+.name__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name__register {
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+}
+
+.desc__register {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.group__form-wrapper {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.group__form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    min-width: 285px;
+}
+
+.label__form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    height: 20px;
+    margin-left: 8px;
+    background-color: var(--white-color);
+    padding: 0 5px;
+}
+
+.control__form {
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    padding: 12px 40px 12px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    line-height: 1.5;
+    background-color: transparent;
+}
+
+.label__form,
+.message__form { 
+    text-align: left;
+}
+
+/* Khi focus hoặc có nội dung thì label nổi lên */
+.group__form input:focus + label,
+.group__form input:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 12px;
+    color: var(--logo-color);
+}
+
+.group__form input:focus {
+    border-color: var(--logo-color);
+}
+
+.control__form:hover {
+    border-color: var(--logo-color);
+}
+
+.group__form.invalid .control__form {
+    border-color: #f33a58;
+}
+
+.group__form.invalid .message__form {
+    color: #f33a58;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+    z-index: 2;
+    transition: color 0.2s;
+}
+
+.message__form {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding: 3px 0 0 3px;
+}
+
+.submit__btn {
+    height: 40px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--logo-color);
+    font-size: 1.5rem;
+    color: var(--black-color);
+    transition-duration: 0.3s;
+}
+
+.submit__btn > i {
+    margin-right: 4px;
+    font-size: 1.5rem;
+}
+
+.submit__btn:hover {
+    background-color: rgba(112, 192, 160, 0.8);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider::before {
+    margin-right: 30px;
+}
+
+.divider::after {
+    margin-left: 30px;
+}
+
+.social__other {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social__other-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    height: 40px;
+    width: 48%;
+    transition-duration: 0.2s;
+}
+
+.social__other-link:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.social__other-link span {
+    font-size: 1.5rem;
+    margin-left: 6px;
+    color: var(--light-text-primary-color);
+}
+
+.policy {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.policy__text {
+    display: block;
+    max-width: 100%;
+    width: 310px;
+    text-align: center;
+}
+
+.policy__text, .policy__text a {
+    font-size: 1.5rem;
+}
+
+.policy__text a {
+    transition-duration: 0.2s;
+    color: var(--border-authen);
+}
+
+.policy__text a:hover {
+    color: rgba(102, 178, 255, 0.7);
+}
+
+.switch__login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.switch__login span,
+.switch__login button {
+    font-size: 1.6rem;
+}
+
+.switch__login button {
+    display: block;
+    background: transparent;
+    margin-left: 5px;
+    color: rgb(102, 178, 255);
+}
+
+.light-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 80%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-password {
+    width: 23px;
+    text-align: center;
+}
